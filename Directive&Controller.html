@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+    <head>
+        <meta charset="UTF-8">
+        <title>Directive指令与Controller控制器交互</title>
+        <link rel="stylesheet" href="framework/bootstrap-3.0.0/css/bootstrap.min.css" />
+        <!--引入js库anglarjs-->
+        <script type="text/javascript" src="framework/1.3.0.14/angular.js"></script>
+        <script type="text/javascript" src="js/Directive&Controller.js"></script>
+    </head>
+    <body>
+        <div ng-controller="myAppCtrl">
+            <loader hello howToLoad="loadData()">数据加载......</loader>
+        </div>
+        <div ng-controller="myAppCtrl2">
+            <loader hello howToLoad="loadData2()">数据加载2......</loader>
+        </div>
+ 
+    </body>
+</html>

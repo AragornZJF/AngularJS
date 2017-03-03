@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+	<head>
+		<meta charset="utf-8" />
+		<title>Angular自定义指令---模式匹配</title>
+		<script type="text/javascript" src="framework/1.3.0.14/angular.js"></script>
+		<script type="text/javascript" src="js/Hello_Directive.js"></script>
+	</head>
+	<body>
+		<hello></hello>
+		<div hello></div>
+		<div class="hello"></div>
+		<!-- directive:hello -->
+		<div></div>
+		
+		<!--代码模板template-
+		<script type="text/ng-template" id="hello.html">
+			<p>Hello Angular Template</p>
+		</script>
+		<!--代码模板template-->
+	</body>
+</html>

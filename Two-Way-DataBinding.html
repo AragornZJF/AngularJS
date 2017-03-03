@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>Angular--数据双向绑定</title>
+		<link rel="stylesheet" href="framework/bootstrap-3.0.0/css/bootstrap.min.css" />
+		<!--引入js库anglarjs-->
+		<script type="text/javascript" src="framework/1.3.0.14/angular.js"></script>
+	</head>
+	<body>
+        <div class="col-sm-6" ng-controller="myModuleCtrl" style="padding: 20px;">
+            <input type="text" class="form-control" placeholder="请任意输入" ng-model="greeting.text">
+            <p>Hello, {{greeting.text}}</p>
+        </div>
+        
+        <script type="text/javascript">
+        	var myModule = angular.module('myModule', []);
+        	myModule.controller('myModuleCtrl', function($scope){
+        		$scope.greeting = {  //初始化
+        			text : 'Angular'
+        		}
+        	})
+        </script>
+	</body>
+</html>
+
+
+

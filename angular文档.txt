@@ -1,0 +1,17 @@
+Anglar 说明
+   一、【开始】
+    1.在<html>标签上多了一个属性ng-app=”MyApp”，它的作用就是用来指定ng的作用域是在<html>标签以内部分。
+            在js中，我们调用angular对象的module方法来声明一个模块，模块的名字和ng-app的值对应
+      var app = angular.module('MyApp', [], function(){console.log('started')});
+    
+    二、【数据与模板的绑定】
+    2.通过数据与模板的绑定，能够让我们摆脱繁琐的DOM操作，而将注意力集中在业务逻辑上。
+      ng-controller 用来声明一个需要和数据进行绑定的模板区域  
+      $scope 代表作用范围
+           通过{{}}只能完成数据向模板的单向绑定。要想进行双向绑定，我们需要用到ng-modle这个指令
+      app.controller('name',function($scope){
+         // 明确指定了这个controller属于MyApp这个模块
+      })
+    3.挂在$scope下的对象
+     ng-show 显示  
+     ng-repeat 数组遍历 ng-repeat="o in question.options"
